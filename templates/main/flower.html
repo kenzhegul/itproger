@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+        <body>
+
+              <div class="row">
+                  {% for i in text %}
+                <div class="col-sm-4">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">{{ i.title }}</div>
+                    <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="panel-footer">{{ i.header }}</div>
+                  </div>
+                </div>
+                  {% endfor %}
+              </div><br>
+
+            <footer class="container-fluid text-center">
+              <p>Online Store Copyright</p>
+              <form class="form-inline">Get deals:
+                <input type="email" class="form-control" size="50" placeholder="Email Address">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+              </form>
+            </footer>
+
+            </body>
+{% endblock %}
