@@ -21,7 +21,8 @@ def flr(request):
 def msg(request):
     data = {"header": "Hello Django", "message": "Welcome to Python"}
     return render(request, "it/msg.html", context=data)
-
+def f():
+    pass
 
 def hdr(request):
     header = "Personal Data"
