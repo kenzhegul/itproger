@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+
+{% block content %}
+<div>
+    {% for i in photo %}
+    <img src="{{ i.img.url }}" alt="">
+    {% endfor %}
+</div>
+{% endblock %}
