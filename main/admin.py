@@ -30,5 +30,5 @@ class AdvertisingAdmin(admin.ModelAdmin):
 
 @admin.register(Flowers)
 class FlowersAdmin(admin.ModelAdmin):
-    list_display = ('id', )
+    list_display = ('id', 'header')
     list_display_links = list_display

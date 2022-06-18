@@ -29,5 +29,7 @@ class Advertising(models.Model):
     address = models.TextField(verbose_name='Адреси')
 
 class Flowers(models.Model):
-    title = models.CharField(max_length=20, verbose_name='аты')
+    title = models.CharField(max_length=100, verbose_name='аты')
     header = models.TextField(verbose_name='Заголовок')
+    price = models.FloatField(verbose_name='баасы')
+    img = models.ImageField(upload_to='images', null=True, blank=True)
