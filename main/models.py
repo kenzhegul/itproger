@@ -33,3 +33,7 @@ class Flowers(models.Model):
     header = models.TextField(verbose_name='Заголовок')
     price = models.FloatField(verbose_name='баасы')
     img = models.ImageField(upload_to='images', null=True, blank=True)
+
+
+class Photos(models.Model):
+    img = models.ImageField(upload_to='images', null=True, blank=True)

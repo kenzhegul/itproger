@@ -1,6 +1,11 @@
 from django.contrib import admin
 
-from main.models import Products, Student, Comment, Profile, Advertising, Flowers
+from main.models import Products, Student, Comment, Profile, Advertising, Flowers, Photos
+
+@admin.register(Photos)
+class PhotosAdmin(admin.ModelAdmin):
+    list_display = ('id', 'img')
+    list_display_links = list_display
 
 @admin.register(Products)
 class ProductsAdmin(admin.ModelAdmin):

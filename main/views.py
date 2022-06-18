@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.template.response import TemplateResponse
 
-from main.models import Comment, Profile, Advertising, Flowers
+from main.models import Comment, Profile, Advertising, Flowers, Photos
 
 def index(request):
     text = Comment.objects.all()
@@ -16,6 +16,10 @@ def about(request):
 def flr(request):
     flower = Flowers.objects.all()
     return render(request, 'main/flower.html', {'flower':flower})
+
+def photo(request):
+    photo = Photos.objects.all()
+    return render(request, 'it/photo.html', {'photo':photo})
 
 
 def msg(request):
